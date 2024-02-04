@@ -416,6 +416,7 @@ fn main() {
 
         tokens = std::fs::read_to_string("tmp.rs").unwrap();
 
+        file_data.push('\n');
         file_data.push_str(tokens.as_str());
 
         std::fs::write(entry.path(), &file_data).unwrap();
